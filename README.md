@@ -5,29 +5,13 @@ Creates a simple smart contract that allows:
 1. Paying for a training / booking it for a particular day
 2. Checking if a client is able to train on a particular day
 
-## Instructions
+## Addresses
 
-## Mnemonic
+Token MAV: `0x0803Deb0E61F78B3E81d6c3FE2fC501F061113a8`
 
-`https://iancoleman.io/bip39/`
+Gym: `0xcc8c8bB295255967E2f9D0dA448e7B4D4E68Da37`
 
-Mnemonic from there:
-
-```
-depth fever bounce butter neck embrace range remember there silent online abuse
-```
-
-## Infura register
-
-Project: `wss://rinkeby.infura.io/ws/v3/00f1373393ee451eb7bfc800cf9eaa19`
-
-### Deployment
-
-First step is `yarn compile`
-
-Second one is to run `yarn deploy`
-
-### Marking a day as a unavailable one
+## Accounts
 
 ```text
 truffle(rinkeby)> accounts
@@ -45,9 +29,25 @@ truffle(rinkeby)> accounts
 ]
 ```
 
----
+## Example of `yarn book-training` run
 
-password for a wallet: j2nvKXR5ig7CT22
-pass prase: depth fever bounce butter neck embrace range remember there silent online abuse
+Get 10 MAV tokens for 0x8CfA10aff69cbc9B9e64F7272AB34fD0eE9227A0  
+Transaction hash: 0x73f697462ca2810623633b7d497c6e8ece54243682564e237d189299c589057f
 
-gym.pay(1640611368, { from: '0x8CfA10aff69cbc9B9e64F7272AB34fD0eE9227A0' })
+Transaction for 10 MAV tokens APPROVED for 0x8CfA10aff69cbc9B9e64F7272AB34fD0eE9227A0  
+Transaction hash: 0x30e11d2b05f2da03f31b4a76db32901afafa08784b9c7d67277c7220b4be4b6d
+
+Paid 10 MAV tokens for date: 31/12/2021, 00:00:00 by client: 0x8CfA10aff69cbc9B9e64F7272AB34fD0eE9227A0  
+Transaction hash: 0xf5967abed6bde58dc7701d4e3f70273f971306d1d1c7f1e414c6e15055770d30
+
+## Verification of contracts
+
+```
+➜  crypto git:(main) ✗ yarn truffle:verify
+yarn run v1.22.17
+$ ./node_modules/.bin/truffle run verify Gym --network rinkeby
+Verifying Gym
+Pass - Verified: https://rinkeby.etherscan.io/address/0xcc8c8bB295255967E2f9D0dA448e7B4D4E68Da37#code
+Successfully verified 1 contract(s).
+✨  Done in 23.34s.
+```

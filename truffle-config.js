@@ -77,6 +77,12 @@ module.exports = {
     // }
   },
 
+  // To verify contracts
+  plugins: ['truffle-plugin-verify'],
+  api_keys: {
+    etherscan: 'BFQ1I7FAK9TSR5EUVXTD88QP1MMQBATZG1',
+  },
+
   // Set default mocha options here, use special reporters etc.
   mocha: {
     // timeout: 100000

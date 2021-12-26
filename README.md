@@ -61,3 +61,32 @@ Thanks to this tutorial: https://thegraph.com/docs/en/developer/quick-start/
 Deployed subgraph: https://thegraph.com/studio/subgraph/mav/
 
 Subgraph: https://testnet.thegraph.com/subgraph?id=0x3fa069d9560d85c932d2511a2a09b19de32dfa37-1
+
+## Tests
+
+```
+➜  crypto git:(main) ✗ yarn test
+yarn run v1.22.17
+$ ./node_modules/.bin/truffle test ./test/Gym.test.js
+Using network 'test'.
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Gym.sol
+> Artifacts written to /var/folders/19/6cx2bhqx4vz_d795qr3rhym40000gn/T/test--63767-nbE5pfmCrOns
+> Compiled successfully using:
+   - solc: 0.8.10+commit.fc410830.Emscripten.clang
+
+
+
+  Contract: Gym
+    #unavailableDaysMap
+      ✓ today is available by default
+      ✓ registers today as unavailable day (254ms)
+
+
+  2 passing (569ms)
+
+✨  Done in 18.29s.
+```

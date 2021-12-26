@@ -8,7 +8,7 @@
     "migrate": "./node_modules/.bin/truffle migrate --network rinkeby",
     "truffle:console": "./node_modules/.bin/truffle console --network rinkeby",
     "truffle:develop": "./node_modules/.bin/truffle develop --network rinkeby",
-    "checkClientTraining": "./node_modules/.bin/truffle exec ./scripts/training_service.js"
+    "book-training": "./node_modules/.bin/truffle --network rinkeby exec ./scripts/book_training.js"
   },
   "keywords": [],
   "author": "",

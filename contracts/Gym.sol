@@ -74,7 +74,7 @@ contract Gym {
         );
         require(
             !_hasClientOnDate(dayTimestamp, msg.sender),
-            "ERROR:ALREADY_TRAIN"
+            "ERROR:CLIENT_ALREADY_EXISTS"
         );
 
         trainingDaysMap[day].push(msg.sender);

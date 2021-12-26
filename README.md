@@ -42,6 +42,8 @@ Transaction hash: 0xf5967abed6bde58dc7701d4e3f70273f971306d1d1c7f1e414c6e1505577
 
 ## Verification of contracts
 
+Thanks to https://forum.openzeppelin.com/t/how-to-verify-with-hardhat-or-truffle-a-smart-contract-using-openzeppelin-contracts/4119
+
 ```
 ➜  crypto git:(main) ✗ yarn truffle:verify
 yarn run v1.22.17

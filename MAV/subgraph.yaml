@@ -1,0 +1,32 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Gym
+    network: rinkeby
+    source:
+      address: "0xcc8c8bB295255967E2f9D0dA448e7B4D4E68Da37"
+      abi: Gym
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - LogPayment
+        - LogRegisteredUnavailableDay
+        - LogUnregisteredUnavailableDay
+        - LogWithdrawn
+      abis:
+        - name: Gym
+          file: ./abis/Gym.json
+      eventHandlers:
+        - event: LogPayment(address,address,uint256,uint256)
+          handler: handleLogPayment
+        - event: LogRegisteredUnavailableDay(address,uint256)
+          handler: handleLogRegisteredUnavailableDay
+        - event: LogUnregisteredUnavailableDay(address,uint256)
+          handler: handleLogUnregisteredUnavailableDay
+        - event: LogWithdrawn(uint256)
+          handler: handleLogWithdrawn
+      file: ./src/mapping.ts

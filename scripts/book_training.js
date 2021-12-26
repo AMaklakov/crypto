@@ -1,5 +1,5 @@
 const CLIENT_ADDRESS = '0x8CfA10aff69cbc9B9e64F7272AB34fD0eE9227A0'
-const TRAINING_DATE = new Date('2021.12.31')
+const TRAINING_DATE = new Date('2022.01.01')
 
 const getUnixTime = (date) => Math.floor(+date / 1000)
 const formatDate = (date) => date.toLocaleString()

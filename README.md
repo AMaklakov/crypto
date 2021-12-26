@@ -53,3 +53,11 @@ Pass - Verified: https://rinkeby.etherscan.io/address/0xcc8c8bB295255967E2f9D0dA
 Successfully verified 1 contract(s).
 ✨  Done in 23.34s.
 ```
+
+## Subgraph
+
+Thanks to this tutorial: https://thegraph.com/docs/en/developer/quick-start/
+
+Deployed subgraph: https://thegraph.com/studio/subgraph/mav/
+
+Subgraph: https://testnet.thegraph.com/subgraph?id=0x3fa069d9560d85c932d2511a2a09b19de32dfa37-1
